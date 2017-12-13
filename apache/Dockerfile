@@ -1,4 +1,4 @@
-FROM php:apache
+FROM php:7.0-apache
 RUN docker-php-ext-install mysqli
 RUN apt-get update && apt-get install -q -y ssmtp mailutils && rm -rf /var/lib/apt/lists
 RUN echo "hostname=rusnasti.ru" > /etc/ssmtp/ssmtp.conf
